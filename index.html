@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .cell.hit {
+            background-color: red;
+        }
+        .cell.miss {
+            background-color: blue;
+        }
+    </style>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="game-container">
+        <div class="gameboard">
+        </div>
+        <div class="selectionBoard">
+
+        </div>
+        <div class="AIboard" style="display: none;"></div>
+    </div>
+</body>
+</html>
