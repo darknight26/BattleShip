@@ -7,39 +7,98 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 80vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
         }
+        header {
+            height: 10%;
+            display: flex;
+            font-size: 50px;
+            font-weight: 4000;
+            text-align: center;
+            text-decoration-color: aliceblue;
+            color: #f0f0f0;
+        }
+        .game-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        .gameboard, .AIboard {
+            padding: 5%;
+            width: 50%; /* Adjust width for proper visibility */
+            height: 90%; /* Adjust height for proper visibility */
+            display: grid;
+            border: 2px solid #444; /* Optional: To distinguish the board */
+            box-sizing: border-box;
+            background-color: #2e2e2e;
+        }
+        .selectionBoard {
+            width: 50%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #3e3e3e;
+            border: 2px solid #444;
+        }
+
+        .ship {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            cursor: grab;
+        }
+
+        .ship-part {
+            width: 100px;
+            height: 62px;
+            background-color: #555;
+            border: 1px solid #333;
+        }
+
         .cell {
-            width: 30px;
-            height: 30px;
-            background-color: #fff;
-            border: 1px solid #ccc;
+            width: 100px; /* Adjust dynamically based on grid */
+            height: 62px; /* Adjust dynamically based on grid */
+            background-color: #444;
+            border: 1px solid #555;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            box-sizing: border-box;
+        }
+        .cell.placed-ship {
+            background-color: #666; /* Distinguishable color for placed ships */
         }
         .cell.hit {
-            background-color: red;
+            background-color: #ff4c4c;
         }
         .cell.miss {
-            background-color: blue;
+            background-color: #4c4cff;
         }
     </style>
 <script defer src="main.js"></script></head>
 <body>
+    <header style="display: block;">Battleship</header>
     <div class="game-container">
         <div class="gameboard">
+            <!-- Gameboard content here -->
         </div>
         <div class="selectionBoard">
-
+            <!-- Selection board content here -->
         </div>
-        <div class="AIboard" style="display: none;"></div>
+        <div class="AIboard" style="display: none;">
+            <!-- AI board content here -->
+        </div>
     </div>
+    <script>
+        
+    </script>
 </body>
 </html>
